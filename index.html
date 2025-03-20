@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Player - Reproductor Multimedia Avanzado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .tech-requirements {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .tech-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .req-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s;
+        }
+
+        .req-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .req-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .req-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .req-card ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Estilos para el equipo en el footer */
+        .footer-team {
+            flex: 1;
+        }
+
+        .footer-team-member {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .footer-team-member img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .member-info h4 {
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .member-info p {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info .social-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .member-info .social-links a {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>App<span>Player</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#api">API</a></li>
+                    <li><a href="#documentacion">Documentación</a></li>
+                    <li><a href="#capturas">Capturas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Reproductor Multimedia Avanzado</h2>
+                <p>Una solución completa para la reproducción y gestión de
+                    contenido multimedia con control remoto a través de API
+                    REST.</p>
+                <div class="hero-buttons">
+                    <a href="#caracteristicas" class="btn btn-primary">Ver
+                        Características</a>
+                    <a href="https://github.com/tecnopulsar/app-player-wetechar"
+                        class="btn btn-secondary">GitHub <i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/totem2.webp" alt="App Player Preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <h2 class="section-title">Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Reproductor Multimedia</h3>
+                    <p>Reproduce audio y video en múltiples formatos con soporte
+                        para VLC Media Player.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Control Remoto</h3>
+                    <p>Controla la reproducción desde cualquier dispositivo en
+                        la red a través de una API REST.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Interfaz Moderna</h3>
+                    <p>Interfaz gráfica moderna y responsiva para una
+                        experiencia de usuario óptima.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Monitoreo del Sistema</h3>
+                    <p>Supervisa recursos del sistema y estado de la red en
+                        tiempo real a través de herramientas integradas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                    <h3>Listas de Reproducción</h3>
+                    <p>Gestiona listas de reproducción personalizadas para
+                        organizar tu contenido multimedia.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Personalizable</h3>
+                    <p>Arquitectura modular y extensible para adaptarse a
+                        diferentes casos de uso y cartelería digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="api" class="api">
+        <div class="container">
+            <h2 class="section-title">API REST</h2>
+            <p class="section-description">App Player proporciona una API
+                RESTful completa para controlar todas sus funcionalidades de
+                forma remota, organizada de manera modular.</p>
+
+            <div class="api-endpoints">
+                <div class="endpoint">
+                    <h3>Control de VLC</h3>
+                    <ul>
+                        <li><code>GET /api/vlc/status</code> - Estado actual del
+                            reproductor</li>
+                        <li><code>GET /api/vlc/play</code> - Iniciar
+                            reproducción</li>
+                        <li><code>GET /api/vlc/pause</code> - Pausar
+                            reproducción</li>
+                        <li><code>GET /api/vlc/stop</code> - Detener
+                            reproducción</li>
+                        <li><code>GET /api/vlc/playlist</code> - Obtener
+                            playlist actual</li>
+                    </ul>
+                </div>
+                <div class="endpoint">
+                    <h3>Sistema</h3>
+                    <ul>
+                        <li><code>GET /api/system/info</code> - Información del
+                            sistema</li>
+                        <li><code>GET /api/system/resources</code> - Recursos
+                            del sistema</li>
+                        <li><code>GET /api/system/network</code> - Información
+                            de red</li>
+                        <li><code>GET /api/system/status</code> - Estado del
+                            sistema</li>
+                        <li><code>POST /api/system/reboot</code> - Reiniciar el
+                            sistema</li>
+                    </ul>
+                </div>
+                <div class="endpoint">
+                    <h3>Archivos y Playlists</h3>
+                    <ul>
+                        <li><code>GET /api/files/list</code> - Listar archivos
+                            disponibles</li>
+                        <li><code>POST /api/files/upload</code> - Subir archivos
+                        </li>
+                        <li><code>DELETE /api/files/:id</code> - Eliminar
+                            archivo</li>
+                        <li><code>POST /api/playlist/upload</code> - Subir
+                            listas de reproducción</li>
+                        <li><code>GET /api/playlist/list</code> - Listar
+                            playlists disponibles</li>
+                        <li><code>DELETE /api/playlist/:id</code> - Eliminar
+                            playlist</li>
+                    </ul>
+                </div>
+                <div class="endpoint">
+                    <h3>Aplicación</h3>
+                    <ul>
+                        <li><code>GET /api/app/version</code> - Obtener versión
+                            de la aplicación</li>
+                        <li><code>GET /api/app/config</code> - Obtener
+                            configuración</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="api-documentation">
+                <a href="#documentacion" class="btn btn-primary">Ver
+                    Documentación Completa</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentacion" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Documentación</h2>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>Guía de Inicio Rápido</h3>
+                    <p>Aprende a instalar y configurar App Player en minutos
+                        para tu proyecto de cartelería digital.
+                    </p>
+                    <a href="#" class="btn btn-secondary">Ver Guía</a>
+                </div>
+                <div class="doc-card">
+                    <h3>API Reference</h3>
+                    <p>Documentación completa de todos los endpoints de la API
+                        para integración con otros sistemas.
+                    </p>
+                    <a href="#" class="btn btn-secondary">Ver API</a>
+                </div>
+                <div class="doc-card">
+                    <h3>Arquitectura</h3>
+                    <p>Explorar la arquitectura y componentes de la aplicación
+                        basada en Electron.js y Node.js.
+                    </p>
+                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="tech-requirements">
+                <h3 class="tech-title">Requisitos del Sistema</h3>
+                <div class="requirements-grid">
+                    <div class="req-card">
+                        <h4><i class="fas fa-microchip"></i> Hardware</h4>
+                        <ul>
+                            <li>Raspberry Pi 4 o superior</li>
+                            <li>Mínimo 2 GB de RAM</li>
+                            <li>Conexión a Internet</li>
+                        </ul>
+                    </div>
+                    <div class="req-card">
+                        <h4><i class="fas fa-laptop-code"></i> Software</h4>
+                        <ul>
+                            <li>Sistema operativo compatible (Raspbian, Ubuntu)
+                            </li>
+                            <li>Node.js (versión 14 o superior)</li>
+                            <li>npm (gestor de paquetes de Node.js)</li>
+                            <li>VLC Media Player con interfaz HTTP</li>
+                        </ul>
+                    </div>
+                    <div class="req-card">
+                        <h4><i class="fas fa-code-branch"></i> Tecnologías</h4>
+                        <ul>
+                            <li>Electron.js</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>Socket.IO</li>
+                            <li>Python (scripts de control)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Solicitar Información</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Necesitas más información?</h3>
+                    <p>Complete el formulario y nos pondremos en contacto con
+                        usted para brindarle más detalles sobre nuestra
+                        aplicación de cartelería digital.</p>
+                </div>
+                <form class="contact-form"
+                    action="mailto:ingenieria@wetechar.com" method="POST"
+                    enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" name="nombre"
+                            placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email"
+                            placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono"
+                            placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Su mensaje"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar
+                        Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="capturas" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Capturas de la Aplicación</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/carteleria-1.jpg"
+                        alt="Captura de la aplicación de cartelería digital">
+                    <div class="screenshot-info">
+                        <h3>Panel de Control</h3>
+                        <p>Interfaz principal para gestionar el contenido
+                            digital</p>
+                    </div>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/carteleria-2.jpg"
+                        alt="Captura de la aplicación de cartelería digital">
+                    <div class="screenshot-info">
+                        <h3>Editor de Contenido</h3>
+                        <p>Herramienta intuitiva para crear y editar contenido
+                        </p>
+                    </div>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/carteleria-3.jpg"
+                        alt="Captura de la aplicación de cartelería digital">
+                    <div class="screenshot-info">
+                        <h3>Vista Previa</h3>
+                        <p>Visualización en tiempo real del contenido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>App<span>Player</span></h2>
+                    <p>Una solución completa para la reproducción y gestión de
+                        contenido multimedia.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#api">API</a></li>
+                        <li><a href="#documentacion">Documentación</a></li>
+                        <li><a href="#capturas">Capturas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-envelope"></i> info@appplayer.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Buenos Aires,
+                        Argentina</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-team">
+                    <h3>Nuestro Equipo</h3>
+                    <div class="footer-team-member">
+                        <img src="images/team-1.png" alt="Miembro del equipo">
+                        <div class="member-info">
+                            <h4>TecnoPulsar</h4>
+                            <p>Desarrollador Principal</p>
+                            <div class="social-links">
+                                <a href="https://github.com/tecnopulsar"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 App Player. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
