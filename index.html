@@ -337,7 +337,7 @@
         </div>
     </section>
 
-    <section id="contacto" class="contact">
+    <!-- <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">Solicitar Información</h2>
             <div class="contact-content">
@@ -347,9 +347,13 @@
                         usted para brindarle más detalles sobre nuestra
                         aplicación de cartelería digital.</p>
                 </div>
-                <form class="contact-form"
-                    action="mailto:ingenieria@wetechar.com" method="POST"
-                    enctype="text/plain">
+                <form name="contacto" method="POST" data-netlify="true"
+                    class="contact-form">
+                    <input type="hidden" name="form-name" value="contacto" />
+                    <input type="hidden" name="subject"
+                        value="Consulta sobre Cartelería Digital" />
+                    <input type="hidden" name="contacto-destino"
+                        value="ingenieria@wetechar.com" />
                     <div class="form-group">
                         <input type="text" name="nombre"
                             placeholder="Nombre completo" required>
@@ -371,7 +375,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="capturas" class="screenshots">
         <div class="container">
@@ -461,6 +465,19 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Código para mejorar la experiencia de usuario al enviar el formulario
+        document.querySelector(".contact-form").addEventListener("submit", function (event) {
+            // No interferimos con el procesamiento nativo de Netlify
+            // Solo agregamos mejoras de UX como desactivar el botón
+            const submitButton = this.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerText = "Enviando...";
+                // El formulario continuará su envío normal por Netlify
+            }
+        });
+    </script>
 </body>
 
 </html>
